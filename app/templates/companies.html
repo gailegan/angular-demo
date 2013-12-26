@@ -1,0 +1,45 @@
+<h3>Companies</h3>
+<div class="panel panel-primary">
+	<div class="panel panel-default">
+		<!-- Default panel contents -->
+		<div class="panel-heading">Search/Edit</div>
+		<div class="panel-body">
+			<p>
+				<dl>
+					<dt><label>Search</label></dt>
+					<dd>
+						<input type="text" name="name" value="" id="name">
+						<button type="button" class="btn btn-primary btn-sm">Go</button>
+					</dd>
+				</dl>
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-primary">
+	<div class="panel panel-default">
+		<div class="panel-heading">Companies</div>
+		<div class="panel-body">
+			<p></p>
+		</div>
+		<table class="table table-striped table-bordered table-hover">
+			<thead>
+				<tr>
+					<td><strong>Name</strong></td>
+					<td><strong>Type</strong></td>
+					<td><strong>Parent</strong></td>
+					<td><strong>Timezone</strong></td>
+				</tr>
+			</thead>
+			<tbody>     
+				<tr ng-repeat="company in companies">
+					<td><a href="#">{{company.name}}</a></td>
+					<td>{{company.type}}</td>
+					<td>{{company.parent}}</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

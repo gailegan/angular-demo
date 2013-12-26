@@ -1,0 +1,43 @@
+<h3>Contacts</h3>
+<div class="panel panel-primary">
+	<div class="panel panel-default">
+		<!-- Default panel contents -->
+		<div class="panel-heading">Search/Edit</div>
+		<div class="panel-body">
+			<p>
+				<dl>
+					<dt><label>Search</label></dt>
+					<dd>
+						<input type="text" name="name" value="" id="name">
+						<button type="button" class="btn btn-primary btn-sm" ng-click="displayResults()">Go</button>
+					</dd>
+				</dl>
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-primary" ng-show="showResults">
+	<div class="panel panel-default">
+		<div class="panel-heading">Contacts</div>
+		<div class="panel-body">
+			<p></p>
+		</div>
+		<table class="table table-striped table-bordered table-hover">
+			<thead>
+				<tr>
+					<td><strong>Name</strong></td>
+					<td><strong>Property</strong></td>
+					<td><strong>Type</strong></td>
+				</tr>
+			</thead>
+			<tbody>     
+				<tr ng-repeat="contact in contacts">
+					<td><a href="#/contactedit/{{contact.id}}" >{{contact.name}}</a></td>
+					<td>{{contact.property}}</td>
+					<td>{{contact.type}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
